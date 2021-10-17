@@ -1,0 +1,157 @@
+{
+  "Routes": [
+    // -------------------- RUTAS LIBRERIA -------------------
+    // API AUTORES
+    {
+      "DownstreamPathTemplate": "/api/Autor",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8562"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/autor",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScope": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Autor/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8562"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/autor/{id}",
+      "UpstreamHttpMethod": [ "GET", "UPDATE", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScope": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Autor/pagination",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8562"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/autor/pagination",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScope": []
+      }
+    },
+    // FIN API AUTORES
+    // API LIBROS
+    {
+      "DownstreamPathTemplate": "/api/Libro",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8562"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/libro",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScope": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Libro/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8562"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/libro/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScope": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Libro/pagination",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8562"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/libro/pagination",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScope": []
+      }
+    },
+    // FIN API LIBRO
+    // -------------------- FIN LIBRERIA -------------------
+    // -------------------- RUTAS SEGURIDAD -------------------
+    {
+      "DownstreamPathTemplate": "/api/Usuario",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8563"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/usuario",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScope": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Usuario/registrar",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8563"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/usuario/registrar",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Usuario/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8563"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/usuario/login",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+    // -------------------- FIN RUTAS SEGURIDAD -------------------
+  ]
+}
